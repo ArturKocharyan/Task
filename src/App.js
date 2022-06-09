@@ -53,7 +53,7 @@ function App() {
               addCard()
             }} />
             <Button text={'sort card'} onClick={() => {
-              const sortedData = [...data].sort((a, b) => a.id - b.id)
+              const sortedData = [...data].sort((a, b) => sorted?a.id - b.id: b.id-a.id)
               setDate(sortedData)
               setSorted(!sorted)
             }} />
